@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/skarden_main/app/UI/icon/png/prim1.1nbg.png">
+    <title>Skarden | Shop</title>
+    <link rel="stylesheet" href="/skarden_main/app/UI/css/market.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<div id="page-fade"></div>
+
+<body>
+    <div class="productslist-container">
+        <div class="mainlogo">
+            <img src="/skarden_main/app/UI/icon/png/prim1.1nbg.png" style="width: 60%;">
+
+        </div>
+
+        <button class="toggle-sorting-section" id="toggle-sorting-section-btn">
+            <span class="toggle-arrow-bg"><span class="toggle-arrow">&lt;</span></span>
+        </button>
+
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="../../../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sorting">
+            <button class="toggle-sorting-btn" aria-expanded="false" aria-controls="sorting-menu">
+                <span class="toggle-icon">▼</span> Sort Options
+            </button>
+            <div class="collapsible-sorting" id="sorting-menu">
+                <label for="sort-price" class="sr-only">Sort by Price</label>
+                <select id="sort-price">
+                    <option value="default">Price: Default</option>
+                    <option value="low-to-high">Price: Low to High</option>
+                    <option value="high-to-low">Price: High to Low</option>
+                </select>
+                <label for="sort-name" class="sr-only">Sort by Name</label>
+                <select id="sort-name">
+                    <option value="default">Name: Default</option>
+                    <option value="a-to-z">Name: A to Z</option>
+                    <option value="z-to-a">Name: Z to A</option>
+                </select>
+                <label for="sort-date" class="sr-only">Sort by Date</label>
+                <select id="sort-date">
+                    <option value="default">Date: Default</option>
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+        </div>
+        <div class="products-scroll">
+            <div class="product-card">
+                <img src="https://static.vecteezy.com/system/resources/previews/029/721/159/non_2x/broccoli-transparent-background-png.png"
+                    alt="Product 1">
+                <div class="product-info">
+                    <h3>Broccoli</h3>
+                    <p data-price="19.99">$19.99</p>
+                </div>
+                <a href="/skarden_main/app/UI/productHtml/protoproductpurchase.html"><button class="buy-button">Buy Now</button></a>
+            </div>
+            <div class="product-card">
+                <img src="https://wallpapers.com/images/featured/carrot-png-7crm54jnhoaaa46f.jpg" alt="Product 2">
+                <div class="product-info">
+                    <h3>Carrot</h3>
+                    <p data-price="24.99">$24.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://pngimg.com/d/spinach_PNG33.png" alt="Product 3">
+                <div class="product-info">
+                    <h3>Spinach</h3>
+                    <p data-price="15.99">$15.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://dtgxwmigmg3gc.cloudfront.net/imagery/assets/derivations/icon/512/512/true/eyJpZCI6IjQ5MWFhZDBmZjFmNjI2MmM3NjRlNTA1NWVkZWYyNTRmLmpwZyIsInN0b3JhZ2UiOiJwdWJsaWNfc3RvcmUifQ?signature=64ccfa2c9d19ea8ef3f38992c7ca4869d3058c8227947079ff7af3007907ca35"
+                    alt="Product 4">
+                <div class="product-info">
+                    <h3>Kale</h3>
+                    <p data-price="29.99">$29.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://static.vecteezy.com/system/resources/previews/011/190/604/non_2x/green-zucchini-isolated-png.png"
+                    alt="Product 5">
+                <div class="product-info">
+                    <h3>Zucchini</h3>
+                    <p data-price="22.99">$22.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://png.pngtree.com/png-clipart/20210530/original/pngtree-sweet-pepper-red-food-png-image_6343595.jpg"
+                    alt="Product 6">
+                <div class="product-info">
+                    <h3>Sweet Pepper</h3>
+                    <p data-price="18.99">$18.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/029/720/262/small_2x/cauliflower-transparent-background-png.png"
+                    alt="Product 7">
+                <div class="product-info">
+                    <h3>Cauliflower</h3>
+                    <p data-price="27.99">$27.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://thumbs.dreamstime.com/b/tomatoes-half-tomato-isolated-white-png-file-transparent-background-tomatoes-half-tomato-isolated-white-136961939.jpg"
+                    alt="Product 8">
+                <div class="product-info">
+                    <h3>Tomato</h3>
+                    <p data-price="21.99">$21.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://purepng.com/public/uploads/large/purepng.com-cucumbercucumbervegetablespicklegreenfoodhealthycucumbers-481522161925n6wbx.png"
+                    alt="Product 1">
+                <div class="product-info">
+                    <h3>Cucumber</h3>
+                    <p data-price="19.99">$19.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://www.pngplay.com/wp-content/uploads/10/Brinjal-Download-Free-PNG.png" alt="Product 2">
+                <div class="product-info">
+                    <h3>Eggplant</h3>
+                    <p data-price="24.99">$24.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://static.vecteezy.com/system/resources/previews/022/149/260/non_2x/green-lettuce-isolated-png.png"
+                    alt="Product 3">
+                <div class="product-info">
+                    <h3>Lettuce</h3>
+                    <p data-price="15.99">$15.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://www.pngmart.com/files/1/Red-Onion-PNG-Transparent-Image.png" alt="Product 4">
+                <div class="product-info">
+                    <h3>Onion</h3>
+                    <p data-price="29.99">$29.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://pngimg.com/d/garlic_PNG12765.png" alt="Product 5">
+                <div class="product-info">
+                    <h3>Garlic</h3>
+                    <p data-price="22.99">$22.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://www.freeiconspng.com/uploads/potato-png-0.png" alt="Product 6">
+                <div class="product-info">
+                    <h3>Potato</h3>
+                    <p data-price="18.99">$18.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://www.pngarts.com/files/5/Green-Beans-PNG-Free-Download.png" alt="Product 7">
+                <div class="product-info">
+                    <h3>Green Beans</h3>
+                    <p data-price="27.99">$27.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://static.vecteezy.com/system/resources/previews/029/711/105/non_2x/sweet-potato-transparent-background-png.png"
+                    alt="Product 8">
+                <div class="product-info">
+                    <h3>Sweet Potato</h3>
+                    <p data-price="21.99">$21.99</p>
+                </div>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="subscribe-section">
+        <div class="subs-content">
+            <h3>Stay Updated</h3>
+            <p>Get the latest farming tips and exclusive offers delivered to your inbox.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit"><i class="fas fa-envelope"></i> Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-column-img">
+                    <img src="/skarden_main/app/UI/icon/png/whitegrayscale.png" style="width: 70%;">
+                </div>
+            </div>
+            <div class="footer-column">
+                <h2 class="logo">Skarden</h2>
+                <p>Your trusted partner in building productive, flourishing farms. Quality supplies for every farming
+                    journey.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shipping.html">Shipping Info</a></li>
+                    <li><a href="return.html">Returns</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Seeds & Bulbs</a></li>
+                    <li><a href="#">Garden Tools</a></li>
+                    <li><a href="#">Fertilizers</a></li>
+                    <li><a href="#">Pots & Planters</a></li>
+                    <li><a href="#">Live Plants</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Skarden. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/skarden_main/app/UI/js/nav.js"></script>
+    <script src="/skarden_main/app/UI/js/fade.js"></script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'96404c677b2ae785',t:'MTc1MzMyNzQwMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+    <script>
+        const originalTitle = document.title;
+        const hiddenTitle = "Sleeping... 😴😴";
+
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                document.title = hiddenTitle;
+            } else {
+                document.title = originalTitle;
+            }
+        });
+    </script>
+</body>
+
+</html>

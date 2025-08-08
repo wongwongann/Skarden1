@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/skarden_main/app/UI/icon/png/prim1.1nbg.png">
+    <title>Product Purchase Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/skarden_main/app/UI/productCss/protoproductpurchase.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="product-container">
+            <div class="row">
+                <!-- PDImg -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="product-image-container">
+                        <span class="product-label label-new">Baru</span>
+                        <span class="product-label label-bestseller">Best Seller</span>
+                        <img id="main-product-image"
+                            src="https://www.acquagarden.co.uk/cdn/shop/files/acquagarden-broccoli-green-magic-37943660150939.jpg?v=1725036308"
+                            alt="Product Image" class="main-image">
+                    </div>
+
+                    <div class="thumbnail-container">
+                        <img src="https://www.acquagarden.co.uk/cdn/shop/files/acquagarden-broccoli-green-magic-37943660150939.jpg?v=1725036308"
+                            alt="Product Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+                        <img src="https://healthycoursemeals.com/wp-content/uploads/Steamed-Broccoli-600x600.webp"
+                            alt="Product Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+                        <img src="https://flavorgod.com/cdn/shop/files/43809595588803.png?v=1744135765"
+                            alt="Product Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+                        <img src="https://bakeitwithlove.com/wp-content/uploads/2021/04/Microwave-Steamed-Broccoli-lg-600x600.jpg.webp"
+                            alt="Product Thumbnail 4" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <!-- PDInfo -->
+                <div class="col-lg-6">
+                    <h1 class="product-title">Brokoli</h1>
+                    <p class="product-short-description">Brokoli segar pilihan dengan warna hijau cerah, kaya akan
+                        serat, vitamin C, dan antioksidan. Cocok untuk berbagai hidangan sehat seperti sup, tumisan,
+                        atau salad.
+                    </p>
+
+                    <div class="product-price-container">
+                        <span class="product-price">Rp.10.500</span>
+                        <span class="product-original-price">Rp.21.000</span>
+                        <span class="discount-badge">Diskon 50%</span>
+                    </div>
+
+                    <div class="rating-container">
+                        <div class="rating-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <span class="rating-value">4.5</span>
+                        <span class="rating-count">(128 review)</span>
+                    </div>
+
+                    <div class="stock-info">
+                        <i class="bi bi-check-circle-fill stock-in"></i>
+                        <span class="stock-in">Stok Tersedia - 155 unit</span>
+                    </div>
+
+                    <div class="quantity-container">
+                        <span>Quantity:</span>
+                        <button class="quantity-btn" onclick="decreaseQuantity()">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <input type="number" class="form-control quantity-input" id="quantity" value="1" min="1"
+                            max="155">
+                        <button class="quantity-btn" onclick="increaseQuantity()">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-buy-now" onclick="buyNow()">Beli Sekarang</button>
+                        <button class="btn btn-add-to-cart" onclick="addToCart()">Tambah ke Keranjang</button>
+                        <button class="btn btn-wishlist" id="wishlist-btn" onclick="toggleWishlist()">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="specs-tab" data-bs-toggle="tab"
+                                    data-bs-target="#specs" type="button" role="tab">Details</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews"
+                                    type="button" role="tab">Review</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="qa-tab" data-bs-toggle="tab" data-bs-target="#qa"
+                                    type="button" role="tab">Q&A</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="productTabsContent">
+                            <!-- Specs/detail -->
+                            <div class="tab-pane fade show active" id="specs" role="tabpanel">
+                                <table class="specs-table">
+                                    <tr>
+                                        <td>Nama Produk</td>
+                                        <td>Brokoli Segar</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jenis</td>
+                                        <td>Sayuran Hijau</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lokasi</td>
+                                        <td>Bandung, Jawa Barat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Berat</td>
+                                        <td>500g per ikat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kondisi</td>
+                                        <td>Organik, Bebas Pestisida</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Manfaat</td>
+                                        <td>Kaya akan vitamin C, serat, dan antioksidan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Penyimpanan</td>
+                                        <td>Disimpan di lemari es, tahan hingga 7 hari</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kemasan</td>
+                                        <td>Plastik food-grade ramah lingkungan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garansi</td>
+                                        <td>Pengembalian 100% jika tidak segar saat diterima</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- Reviews -->
+                            <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <span class="reviewer-name">Dewi Lestari</span>
+                                        <span class="review-date">5 Juli 2025</span>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="review-text">Brokolinya sangat segar dan hijau. Sampai di rumah dalam
+                                        keadaan baik dan tidak layu.
+                                        Sangat cocok untuk dimasak tumis atau sup. Pasti akan beli lagi!</p>
+                                </div>
+
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <span class="reviewer-name">Andi Prasetyo</span>
+                                        <span class="review-date">1 Juli 2025</span>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                    <p class="review-text">Rasanya enak dan terasa manis alami, cocok untuk diet sehat.
+                                        Tapi beberapa tangkai agak
+                                        besar, jadi perlu dipotong sebelum dimasak.</p>
+                                </div>
+
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <span class="reviewer-name">Lina Kartika</span>
+                                        <span class="review-date">27 Juni 2025</span>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                    <p class="review-text">Pengemasan rapi dan brokoli datang dalam kondisi segar. Hanya
+                                        saja pengirimannya agak
+                                        terlambat satu hari. Tapi tetap puas dengan kualitas produknya.</p>
+                                </div>
+                            </div>
+
+                            <!-- Q&A -->
+                            <div class="tab-pane fade" id="qa" role="tabpanel">
+                                <div class="qa-item">
+                                    <div class="question">Apakah brokoli ini organik?</div>
+                                    <div class="answer">Ya, brokoli ini ditanam secara organik tanpa menggunakan
+                                        pestisida atau bahan kimia berbahaya, sehingga aman untuk dikonsumsi oleh semua
+                                        anggota keluarga.</div>
+                                </div>
+
+                                <div class="qa-item">
+                                    <div class="question">Berapa lama brokoli ini bisa disimpan?</div>
+                                    <div class="answer">Jika disimpan di lemari es, brokoli segar ini dapat bertahan
+                                        hingga 7 hari dalam kondisi baik. Disarankan untuk langsung dikonsumsi agar
+                                        nutrisinya tetap terjaga.</div>
+                                </div>
+
+                                <div class="qa-item">
+                                    <div class="question">Bagaimana cara pengemasan brokoli ini?</div>
+                                    <div class="answer">Brokoli dikemas dalam plastik food-grade ramah lingkungan yang
+                                        menjaga kesegarannya selama pengiriman. Kami memastikan produk tetap higienis
+                                        hingga sampai ke tangan Anda.</div>
+                                </div>
+
+                                <div class="qa-item">
+                                    <div class="question">Apakah ada garansi jika brokoli tidak segar saat diterima?
+                                    </div>
+                                    <div class="answer">Ya, kami memberikan garansi pengembalian 100% jika brokoli yang
+                                        diterima tidak dalam kondisi segar. Silakan hubungi customers service kami dalam
+                                        waktu 1x24 jam setelah penerimaan.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-purchase-bar">
+        <div class="mobile-purchase-content">
+            <div class="mobile-product-info">
+                <div class="mobile-product-title">Brokoli</div>
+                <div class="mobile-product-price">Rp.10.500</div>
+            </div>
+            <div class="mobile-purchase-buttons">
+                <button class="mobile-btn-buy-now" onclick="buyNow()">Beli sekarang</button>
+                <button class="mobile-btn-add-to-cart" onclick="addToCart()">Tambah ke keranjang</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Bubble Button Menu -->
+    <div class="bubble-menu">
+        <div class="bubble-items" id="bubble-items">
+            <button class="bubble-item" onclick="openCart()">
+                <i class="bi bi-cart3"></i>
+                <span class="cart-badge">0</span>
+                <span class="bubble-tooltip">Keranjang</span>
+            </button>
+            <button class="bubble-item" onclick="openShare()">
+                <i class="bi bi-share"></i>
+                <span class="bubble-tooltip">Bagikan</span>
+            </button>
+            <button class="bubble-item" onclick="goBack()">
+                <i class="bi bi-arrow-left"></i>
+                <span class="bubble-tooltip">Kembali</span>
+            </button>
+            <button class="bubble-item" onclick="openSearch()">
+                <i class="bi bi-search"></i>
+                <span class="bubble-tooltip">Search</span>
+            </button>
+        </div>
+        <button class="bubble-toggle" id="bubble-toggle" onclick="toggleBubbleMenu()">
+            <i class="bi bi-plus-lg"></i>
+        </button>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <h3 class="search-modal-title">Cari produk</h3>
+                <button class="search-modal-close" onclick="closeSearch()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <form class="search-form" onsubmit="performSearch(event)">
+                <input type="text" class="form-control search-input" placeholder="Temukan produk..." id="search-input"
+                    required>
+                <button type="submit" class="search-submit">Cari</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="share-modal" id="share-modal">
+        <div class="share-modal-content">
+            <div class="share-modal-header">
+                <h3 class="share-modal-title">Bagikan produk ke...</h3>
+                <button class="share-modal-close" onclick="closeShare()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="share-options">
+                <button class="share-option share-facebook" onclick="shareOnFacebook()">
+                    <i class="bi bi-facebook"></i>
+                </button>
+                <button class="share-option share-twitter" onclick="shareOnTwitter()">
+                    <i class="bi bi-twitter"></i>
+                </button>
+                <button class="share-option share-whatsapp" onclick="shareOnWhatsApp()">
+                    <i class="bi bi-whatsapp"></i>
+                </button>
+                <button class="share-option share-link" onclick="copyLink()">
+                    <i class="bi bi-link-45deg"></i>
+                </button>
+            </div>
+            <div class="share-link-input">
+                <input type="text" class="form-control share-link-field" id="share-link"
+                    value="https://example.com/product/premium-wireless-headphones" readonly>
+                <button class="copy-link-btn" onclick="copyLink()">Salin link</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+     <script>
+        function changeImage(thumbnail) {
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbnail.classList.add('active');         
+            document.getElementById('main-product-image').src = thumbnail.src;
+        }
+        
+        function increaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            const currentValue = parseInt(quantityInput.value);
+            const maxValue = parseInt(quantityInput.max);
+            
+            if (currentValue < maxValue) {
+                quantityInput.value = currentValue + 1;
+            }
+        }
+        
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            const currentValue = parseInt(quantityInput.value);
+            const minValue = parseInt(quantityInput.min);
+            
+            if (currentValue > minValue) {
+                quantityInput.value = currentValue - 1;
+            }
+        }
+        
+        function toggleWishlist() {
+            const wishlistBtn = document.getElementById('wishlist-btn');
+            wishlistBtn.classList.toggle('active');
+            
+            if (wishlistBtn.classList.contains('active')) {
+                wishlistBtn.innerHTML = '<i class="bi bi-heart-fill"></i>';
+            } else {
+                wishlistBtn.innerHTML = '<i class="bi bi-heart"></i>';
+            }
+        }
+        
+        function addToCart() {
+            const quantity = document.getElementById('quantity').value;
+            alert(`Added ${quantity} item(s) to your cart!`);
+        }
+        
+        function buyNow() {
+            const quantity = document.getElementById('quantity').value;
+            alert(`Proceeding to checkout with ${quantity} item(s)!`);
+        }
+
+        function viewDetails(productName) {
+            alert(`Viewing details for ${productName}`);
+        }
+        
+        function addToCartProduct(productName) {
+            alert(`Added ${productName} to your cart!`);
+        }
+        
+        function toggleBubbleMenu() {
+            const bubbleToggle = document.getElementById('bubble-toggle');
+            const bubbleItems = document.getElementById('bubble-items');
+            
+            bubbleToggle.classList.toggle('active');
+            bubbleItems.classList.toggle('active');
+        }
+        
+        function openCart() {
+            alert('Opening cart...');
+            toggleBubbleMenu();
+        }
+        
+        function openShare() {
+            document.getElementById('share-modal').classList.add('active');
+            toggleBubbleMenu();
+        }
+
+        function closeShare() {
+            document.getElementById('share-modal').classList.remove('active');
+        }
+
+        function goBack() {
+            history.back();
+            toggleBubbleMenu();
+        }
+
+        function openSearch() {
+            document.getElementById('search-modal').classList.add('active');
+            document.getElementById('search-input').focus();
+            toggleBubbleMenu();
+        }
+
+        function closeSearch() {
+            document.getElementById('search-modal').classList.remove('active');
+        }
+
+        function performSearch(event) {
+            event.preventDefault();
+            const searchTerm = document.getElementById('search-input').value;
+            alert(`Searching for: ${searchTerm}`);
+            closeSearch();
+        }
+        
+        function shareOnFacebook() {
+            alert('Sharing on Facebook...');
+            closeShare();
+        }
+        
+        function shareOnTwitter() {
+            alert('Sharing on Twitter...');
+            closeShare();
+        }
+        
+        function shareOnWhatsApp() {
+            alert('Sharing on WhatsApp...');
+            closeShare();
+        }
+        
+        function copyLink() {
+            const shareLink = document.getElementById('share-link');
+            shareLink.select();
+            document.execCommand('copy');
+            alert('Link copied to clipboard!');
+            closeShare();
+        }
+
+        window.onclick = function(event) {
+            const searchModal = document.getElementById('search-modal');
+            const shareModal = document.getElementById('share-modal');
+            
+            if (event.target === searchModal) {
+                closeSearch();
+            }
+            
+            if (event.target === shareModal) {
+                closeShare();
+            }
+        }
+    </script>
+
+    <script>
+        const originalTitle = document.title;
+        const hiddenTitle = "Sleeping... 😴😴";
+
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                document.title = hiddenTitle;
+            } else {
+                document.title = originalTitle;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
